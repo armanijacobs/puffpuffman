@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+
+@font-face {
+    font-family: Public Secret;
+    src: url(./assets/PublicSecretDEMO.otf);
+}
+
+.landingtext {
+    font-family: 'Public Secret', sans-serif;
+}
+
+.headertext {
+    font-family: 'Public Secret', sans-serif;
+}
