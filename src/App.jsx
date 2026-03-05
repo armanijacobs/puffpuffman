@@ -7,15 +7,15 @@ import Marquee from './components/Marquee'
 import Reviews from './components/Reviews'
 import FindUs from './components/FindUs'
 import Footer from './components/Footer'
-
-
-
+import CartModal from './components/CartModal'  // NEW
+import { useState } from 'react'
 
 function App() {
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   return (
     <div>
-      <Navbar />
+      <Navbar onCartClick={() => setIsCartOpen(true)} />
       <LandingPage />
       <Selections />
       <OurStory />
@@ -24,6 +24,8 @@ function App() {
       <Reviews />
       <FindUs />
       <Footer />
+
+      <CartModal isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </div>
   )
 }

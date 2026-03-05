@@ -1,0 +1,19 @@
+### Create an order (replace sessionId with your cart's session)
+POST http://localhost:5001/api/orders
+Content-Type: application/json
+
+{
+  "sessionId": "69a82c7d82323a3a983bfffa",
+  "customerName": "John Doe",
+  "customerPhone": "07123456789",
+  "customerEmail": "john@example.com",
+  "scheduledTime": "2026-03-05T18:00:00Z",
+  "orderType": "pickup",
+  "specialInstructions": "Extra spicy please!"
+}
+
+### Get all orders
+GET http://localhost:5001/api/orders
+
+### Get orders by status
+GET http://localhost:5001/api/orders?status=pending

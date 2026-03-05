@@ -5,10 +5,35 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import { Link } from 'react-scroll'
+import { useState, useEffect } from 'react';
+import { getCart } from '../services/api';
 
 
 
-const Navbar = () => {
+const Navbar = ({ onCartClick }) => {
+
+    const [cartCount, setCartCount] = useState(0);
+
+    // Fetch cart count on load
+    useEffect(() => {
+        fetchCartCount();
+
+        // Listen for cart updates
+        const handleCartUpdate = () => fetchCartCount();
+        window.addEventListener('cartUpdated', handleCartUpdate);
+
+        return () => window.removeEventListener('cartUpdated', handleCartUpdate);
+    }, []);
+
+    const fetchCartCount = async () => {
+        try {
+            const cart = await getCart();
+            const count = cart.items.reduce((total, item) => total + item.quantity, 0);
+            setCartCount(count);
+        } catch (err) {
+            console.error('Failed to fetch cart count');
+        }
+    };
 
     useGSAP(() => {
 
@@ -59,6 +84,14 @@ const Navbar = () => {
                     <li>
                         <Link to="reviews" smooth={true} duration={500}>Reviews</Link>
                     </li>
+                    <button onClick={onCartClick} className="relative">
+                        🛒 Cart
+                        {cartCount > 0 && (
+                            <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                                {cartCount}
+                            </span>
+                        )}
+                    </button>
                 </ul>
 
                 <BiMenu className='md:hidden h-6 w-6 -translate-x-4' />
