@@ -6,7 +6,16 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-app.use(cors());
+app.use(cors({
+    origin: [
+        'http://localhost:5173',
+        'https://puffpuffman.vercel.app',
+        'https://puffpuffman-nncayvnev-armanis-projects-564d2832.vercel.app',
+        /https:\/\/puffpuffman.*\.vercel\.app$/  // All Vercel preview URLs
+    ],
+    credentials: true
+}));
+
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI)
