@@ -4,97 +4,144 @@ require('dotenv').config()
 
 // Sample menu items for PuffPuffMan
 const menuItems = [
-    // APPETIZERS
+    // ORIGINALS
     {
-        name: 'Puff Puff Bites',
-        description: 'Golden fried dough balls, lightly sweetened and crispy on the outside, fluffy inside',
-        price: 5.99,
-        category: 'appetizers',
-        image: 'https://via.placeholder.com/300/FFB6C1/000000?text=Puff+Puff+Bites',
+        name: '2 Puff Puff Bites',
+        description: '2 Golden fried dough balls, lightly sweetened and crispy on the outside, fluffy inside',
+        price: 3.00,
+        category: 'originals',
+        image: '/public/images/Plain_Puff_Puff_1.jpg',
         popular: true,
         available: true
     },
     {
-        name: 'Plantain Chips',
-        description: 'Crispy plantain chips served with spicy pepper sauce',
-        price: 4.99,
-        category: 'appetizers',
+        name: '4 Puff Puff Bites',
+        description: '4 Golden fried dough balls, lightly sweetened and crispy on the outside, fluffy inside',
+        price: 5.00,
+        category: 'originals',
+        image: '/public/images/Plain_Puff_Puff_1.jpg',
         available: true
     },
     {
-        name: 'Suya Skewers',
-        description: 'Spiced beef skewers with onions and tomatoes',
-        price: 8.99,
-        category: 'appetizers',
+        name: '6 Puff Puff Bites',
+        description: '6 Golden fried dough balls, lightly sweetened and crispy on the outside, fluffy inside',
+        price: 7.00,
+        category: 'originals',
+        image: '/public/images/Plain_Puff_Puff_1.jpg',
         popular: true,
         available: true
     },
 
-    // MAINS
+    // TOPPINGS
     {
-        name: 'Jollof Rice Bowl',
-        description: 'Smoky jollof rice with grilled chicken, plantains, and coleslaw',
-        price: 14.99,
-        category: 'mains',
+        name: 'Chocolate',
+        description: 'Choco sauce drizzled on top',
+        price: 0.50,
+        category: 'toppings',
+        image: '/public/images/Chocolate,_White_Chocolate_Puff_Puff.jpg',
         popular: true,
         available: true
     },
     {
-        name: 'Waakye Platter',
-        description: 'Rice and beans with spaghetti, gari, boiled egg, and shito sauce',
-        price: 13.99,
-        category: 'mains',
+        name: 'White Chocolate',
+        description: 'White chocolate sauce drizzled on top',
+        price: 0.50,
+        category: 'toppings',
+        image: '/public/images/Chocolate,_White_Chocolate_Puff_Puff.jpg',
         available: true
     },
     {
-        name: 'Banku & Tilapia',
-        description: 'Grilled tilapia served with fermented corn dough and pepper sauce',
-        price: 16.99,
-        category: 'mains',
+        name: 'Rasberry',
+        description: 'Rasberry sauce drizzled on top',
+        price: 0.50,
+        category: 'toppings',
+        image: '/public/images/Valentines_Puff_Puff.jpg',
+        available: true
+    },
+    {
+        name: 'Golden Syrup',
+        description: 'Silky golden syrup squirted all over',
+        price: 0.50,
+        category: 'toppings',
+        image: '/public/images/Golden_Syrup_Puff_Puff_1.jpg',
+        available: true
+    },
+    {
+        name: 'Cinnamon Sugar',
+        description: 'Sprinkled on top',
+        price: 0.50,
+        category: 'toppings',
+        image: '/public/images/Plain_Puff_Puff_1.jpg',
+        available: true
+    },
+    {
+        name: 'Iced Sugar',
+        description: 'Sprinkled on top',
+        price: 0.50,
+        category: 'toppings',
+        image: '/public/images/Icing_Sugar_Puff_Puff_1.jpg',
+        available: true
+    },
+    {
+        name: 'Biscoff',
+        description: 'Crumbled on top',
+        price: 0.50,
+        category: 'toppings',
+        image: '/public/images/Biscoff,_White_Chocolate_Puff_Puff_1.jpg',
+        available: true
+    },
+    {
+        name: 'Hersheys',
+        description: 'Crumbled on top',
+        price: 0.50,
+        category: 'toppings',
+        image: '/public/images/Chocolate,_White_Chocolate,_Oreo_Puff_Puff_1.jpg',
         available: true
     },
 
-    // SIDES
-    {
-        name: 'Kelewele',
-        description: 'Spicy fried plantains with ginger and pepper',
-        price: 6.99,
-        category: 'sides',
-        available: true
-    },
-    {
-        name: 'Fried Yam',
-        description: 'Crispy fried yam served with pepper sauce',
-        price: 5.99,
-        category: 'sides',
-        available: true
-    },
+
+
 
     // DRINKS
     {
-        name: 'Sobolo',
-        description: 'Refreshing hibiscus drink with ginger and cloves',
-        price: 3.99,
+        name: 'Rubicon',
+        description: 'Canned beverage',
+        price: 1.50,
         category: 'drinks',
-        popular: true,
         available: true
     },
     {
-        name: 'Fresh Coconut Water',
-        description: 'Chilled coconut water straight from the shell',
-        price: 4.99,
+        name: 'Coca-cola',
+        description: 'Canned beverage',
+        price: 1.50,
+        category: 'drinks',
+        available: true
+    },
+    {
+        name: 'Fanta',
+        description: 'Canned beverage',
+        price: 1.50,
+        category: 'drinks',
+        available: true
+    },
+    {
+        name: 'Sprite',
+        description: 'Canned beverage',
+        price: 1.50,
         category: 'drinks',
         available: true
     },
 
-    // DESSERTS
+    // SPECIAL OFFERS
     {
-        name: 'Chin Chin',
-        description: 'Crunchy, sweet fried dough snacks',
-        price: 4.99,
-        category: 'desserts',
+        name: '6 Puff Puff, 4 Toppings',
+        description: 'A deal you cannot miss',
+        price: 7.00,
+        category: 'special offers',
+        image: '/public/images/Oreo_Biscoff_Fusion_Puff_Puff_2.jpg',
+        popular: true,
         available: true
-    }
+    },
 ];
 
 // Function to seed the database

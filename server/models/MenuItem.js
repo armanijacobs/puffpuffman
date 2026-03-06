@@ -19,7 +19,7 @@ const menuItemSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-        enum: ['appetizers', 'mains', 'desserts', 'drinks', 'sides']  // Only these 5 allowed
+        enum: ['originals', 'toppings', 'drinks', 'special offers']  // Only these 4 allowed
     },
     image: {
         type: String,
