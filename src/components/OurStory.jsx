@@ -110,7 +110,10 @@ const OurStory = () => {
             <h1 className='headertext text-5xl md:text-7xl text-white text-center md:text-end md:pr-30 pt-20'>Our Story</h1>
 
             <div className='md:flex flex-row mx-auto pt-10 md:w-[90%]'>
-                <p className='text-white font-light text-center text-xs md:text-xl p-8 md:w-1/2 md:pt-20 paragraph xl:text-3xl headertext'>
+                <p className='text-white font-light text-center text-xs md:text-xl p-8 md:w-1/2 md:pt-20 paragraph xl:text-3xl headertext md:hidden'>
+                    <span className='font-bold'>-</span> Puff puff's were always my favorite snack growing up as a kid in the UK. I remember relishing in anticipation to get my hands on some puff puff at our Nigerian functions and events. Now we want to share that same experience with the rest of the world with our special family recipe that has been passed down from generations before us <span className='font-bold'>-</span>
+                </p>
+                <p className='text-white font-light hidden md:block text-center text-xs md:text-xl p-8 md:w-1/2 md:pt-20 paragraph xl:text-3xl headertext'>
                     <span className='text-4xl font-bold'>-</span> <span className='text-amber-400 text-5xl'>Puff puff's</span> were always my favorite snack growing up as a kid in the UK. I remember relishing in anticipation to get my hands on some <span className='text-amber-400 text-5xl'>puff puff</span> at our Nigerian functions and events. Now we want to share that same experience with the rest of the world with our special family recipe that has been passed down from generations before us <span className='text-4xl font-bold'>-</span>
                 </p>
 

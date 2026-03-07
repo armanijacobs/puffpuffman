@@ -9,9 +9,6 @@ import rasberry from '../assets/rasberry.png'
 import variety from '../assets/variety.png'
 
 
-
-
-
 function Carousel() {
 
     const settings = {
