@@ -79,7 +79,7 @@ function Menu() {
         const tl = gsap.timeline({
 
             scrollTrigger: {
-                trigger: '.bg',
+                trigger: '#menu',
                 duration: 10,
                 start: 'top center',
                 end: 'bottom -450',
@@ -90,7 +90,7 @@ function Menu() {
         const tl2 = gsap.timeline({
 
             scrollTrigger: {
-                trigger: '.bg',
+                trigger: '#menu',
                 duration: 9,
                 start: 'top center',
                 end: 'bottom top',
@@ -101,10 +101,12 @@ function Menu() {
         tl.fromTo('.puffanimated', { y: -80, x: 0, scale: 0 }, { y: 650, x: 100, rotate: '390deg', scale: 3 })
 
         tl2.fromTo('.puffanimated2', { y: 600, x: 0, scale: 2.5 }, { y: -650, x: -150, rotate: '90deg', scale: 0.2 })
-    })
+    }, [loading])
 
 
     useGSAP(() => {
+
+        if (loading) return
 
         const tl3 = gsap.timeline()
         let mm = gsap.matchMedia();
@@ -115,7 +117,7 @@ function Menu() {
 
             const tl3 = gsap.timeline({
                 scrollTrigger: {
-                    trigger: ".bg",
+                    trigger: "#menu",
                     duration: 8,
                     start: "top center",
                     end: "bottom center",
@@ -127,7 +129,7 @@ function Menu() {
             tl3.fromTo('.puffanimated3', { y: -60, x: 0, scale: 0 }, { y: 650, x: 0, rotate: '390deg', scale: 4 })
         })
 
-    })
+    }, [loading])
 
     const fetchMenu = async () => {
         try {
@@ -171,22 +173,22 @@ function Menu() {
 
     return (
 
-        <div className='bg-amber-400'>
+        <div className='bg-amber-400 bg'>
             <div id='menu' className="container p-6 w-screen mx-auto">
                 <h1 className="headertext text-5xl md:text-7xl font-bold mb-8 text-white text-center">Menu</h1>
 
                 {/* Image Animation */}
                 <div>
-//                 <img src={puffanimated} className='h-20 absolute left-20 hidden md:flex puffanimated' />
-//             </div>
+                    <img src={puffanimated} className='h-20 absolute left-20 hidden md:flex puffanimated' />
+                </div>
 
-//             <div>
-//                 <img src={puffanimated2} className='h-20 absolute right-20 hidden md:flex puffanimated2' />
-//             </div>
+                <div>
+                    <img src={puffanimated2} className='h-20 absolute right-20 hidden md:flex puffanimated2' />
+                </div>
 
-//             <div>
-//                 <img src={puffanimated3} className='h-20 absolute right-20 md:hidden puffanimated3' />
-//             </div>
+                <div>
+                    <img src={puffanimated3} className='h-20 absolute right-20 md:hidden puffanimated3' />
+                </div>
 
                 {/* Category Filter */}
                 <div className="flex gap-4 mb-8">
