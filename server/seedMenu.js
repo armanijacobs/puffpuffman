@@ -10,7 +10,7 @@ const menuItems = [
         description: '2 Golden fried dough balls, lightly sweetened and crispy on the outside, fluffy inside',
         price: 3.00,
         category: 'originals',
-        image: '/public/images/Plain_Puff_Puff_1.jpg',
+        image: '/images/Plain_Puff_Puff_1.jpg',
         popular: true,
         available: true
     },
@@ -19,7 +19,7 @@ const menuItems = [
         description: '4 Golden fried dough balls, lightly sweetened and crispy on the outside, fluffy inside',
         price: 5.00,
         category: 'originals',
-        image: '/public/images/Plain_Puff_Puff_1.jpg',
+        image: '/images/Plain_Puff_Puff_1.jpg',
         available: true
     },
     {
@@ -27,7 +27,7 @@ const menuItems = [
         description: '6 Golden fried dough balls, lightly sweetened and crispy on the outside, fluffy inside',
         price: 7.00,
         category: 'originals',
-        image: '/public/images/Plain_Puff_Puff_1.jpg',
+        image: '/images/Plain_Puff_Puff_1.jpg',
         popular: true,
         available: true
     },
@@ -38,7 +38,7 @@ const menuItems = [
         description: 'Choco sauce drizzled on top',
         price: 0.50,
         category: 'toppings',
-        image: '/public/images/Chocolate,_White_Chocolate_Puff_Puff.jpg',
+        image: '/images/Chocolate,_White_Chocolate_Puff_Puff.jpg',
         popular: true,
         available: true
     },
@@ -47,7 +47,7 @@ const menuItems = [
         description: 'White chocolate sauce drizzled on top',
         price: 0.50,
         category: 'toppings',
-        image: '/public/images/Chocolate,_White_Chocolate_Puff_Puff.jpg',
+        image: '/images/Chocolate,_White_Chocolate_Puff_Puff.jpg',
         available: true
     },
     {
@@ -55,7 +55,7 @@ const menuItems = [
         description: 'Rasberry sauce drizzled on top',
         price: 0.50,
         category: 'toppings',
-        image: '/public/images/Valentines_Puff_Puff.jpg',
+        image: '/images/Valentines_Puff_Puff.jpg',
         available: true
     },
     {
@@ -63,7 +63,7 @@ const menuItems = [
         description: 'Silky golden syrup squirted all over',
         price: 0.50,
         category: 'toppings',
-        image: '/public/images/Golden_Syrup_Puff_Puff_1.jpg',
+        image: '/images/Golden_Syrup_Puff_Puff_1.jpg',
         available: true
     },
     {
@@ -71,7 +71,7 @@ const menuItems = [
         description: 'Sprinkled on top',
         price: 0.50,
         category: 'toppings',
-        image: '/public/images/Plain_Puff_Puff_1.jpg',
+        image: '/images/Plain_Puff_Puff_1.jpg',
         available: true
     },
     {
@@ -79,7 +79,7 @@ const menuItems = [
         description: 'Sprinkled on top',
         price: 0.50,
         category: 'toppings',
-        image: '/public/images/Icing_Sugar_Puff_Puff_1.jpg',
+        image: '/images/Icing_Sugar_Puff_Puff_1.jpg',
         available: true
     },
     {
@@ -87,7 +87,7 @@ const menuItems = [
         description: 'Crumbled on top',
         price: 0.50,
         category: 'toppings',
-        image: '/public/images/Biscoff,_White_Chocolate_Puff_Puff_1.jpg',
+        image: '/images/Biscoff,_White_Chocolate_Puff_Puff_1.jpg',
         available: true
     },
     {
@@ -95,42 +95,10 @@ const menuItems = [
         description: 'Crumbled on top',
         price: 0.50,
         category: 'toppings',
-        image: '/public/images/Chocolate,_White_Chocolate,_Oreo_Puff_Puff_1.jpg',
+        image: '/images/Chocolate,_White_Chocolate,_Oreo_Puff_Puff_1.jpg',
         available: true
     },
 
-
-
-
-    // DRINKS
-    {
-        name: 'Rubicon',
-        description: 'Canned beverage',
-        price: 1.50,
-        category: 'drinks',
-        available: true
-    },
-    {
-        name: 'Coca-cola',
-        description: 'Canned beverage',
-        price: 1.50,
-        category: 'drinks',
-        available: true
-    },
-    {
-        name: 'Fanta',
-        description: 'Canned beverage',
-        price: 1.50,
-        category: 'drinks',
-        available: true
-    },
-    {
-        name: 'Sprite',
-        description: 'Canned beverage',
-        price: 1.50,
-        category: 'drinks',
-        available: true
-    },
 
     // SPECIAL OFFERS
     {
@@ -138,7 +106,7 @@ const menuItems = [
         description: 'A deal you cannot miss',
         price: 7.00,
         category: 'special offers',
-        image: '/public/images/Oreo_Biscoff_Fusion_Puff_Puff_2.jpg',
+        image: '/images/Oreo_Biscoff_Fusion_Puff_Puff_2.jpg',
         popular: true,
         available: true
     },

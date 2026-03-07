@@ -178,7 +178,7 @@ function Menu() {
 
         <div className='bg-amber-400'>
             <div id='menu' className="container p-6 w-screen mx-auto">
-                <h1 className="headertext text-5xl md:text-7xl font-bold mb-8 text-white">Our Menu</h1>
+                <h1 className="headertext text-5xl md:text-7xl font-bold mb-8 text-white text-center">Menu</h1>
 
                 {/* Category Filter */}
                 <div className="flex gap-4 mb-8">
@@ -199,12 +199,6 @@ function Menu() {
                         className={`px-4 py-2 rounded ${selectedCategory === 'toppings' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                     >
                         Toppings
-                    </button>
-                    <button
-                        onClick={() => setSelectedCategory('drinks')}
-                        className={`px-4 py-2 rounded ${selectedCategory === 'drinks' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
-                    >
-                        Drinks
                     </button>
                     <button
                         onClick={() => setSelectedCategory('special offers')}
