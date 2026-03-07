@@ -100,9 +100,9 @@ const OurStory = () => {
         <div id='ourstory' className='w-auto h-auto pb-40 bg-cyan-400 overflow-x-hidden md:pt-10 relative'>
 
             {/* Floating Puff Puff Images */}
-            <img src={puffanimated} className='h-20 absolute left-20 top-20 hidden md:flex puffanimated z-10' alt="puff 1" />
-            <img src={puffanimated2} className='h-20 absolute right-20 top-20 hidden md:flex puffanimated2 z-10' alt="puff 2" />
-            <img src={puffanimated3} className='h-20 absolute right-20 top-20 md:hidden puffanimated3 z-10' alt="puff 3" />
+            <img src={puffanimated} className='h-30 absolute left-20 top-20 hidden md:flex puffanimated z-10' alt="puff 1" />
+            <img src={puffanimated2} className='h-25 absolute right-55 top-35 hidden md:flex puffanimated2 z-10' alt="puff 2" />
+            <img src={puffanimated3} className='h-30 absolute right-20 top-20 md:hidden puffanimated3 z-10' alt="puff 3" />
 
             <h1 className='headertext text-5xl md:text-7xl text-white text-center md:text-end md:pr-30 pt-20'>Our Story</h1>
 
