@@ -1,69 +1,9 @@
 // import React from 'react'
-// import puffanimated from '../assets/puffanimated.png'
-// import puffanimated2 from '../assets/puffanimated2.png'
-// import puffanimated3 from '../assets/puffanimated3.png'
-// import { gsap } from 'gsap'
-// import { ScrollTrigger } from 'gsap/ScrollTrigger'
-// import { useGSAP } from '@gsap/react'
+
 
 // const Menu = () => {
 
-//     useGSAP(() => {
 
-//         gsap.registerPlugin(ScrollTrigger)
-
-//         const tl = gsap.timeline({
-
-//             scrollTrigger: {
-//                 trigger: '.bg',
-//                 duration: 10,
-//                 start: 'top center',
-//                 end: 'bottom -450',
-//                 scrub: true,
-//             }
-//         })
-
-//         const tl2 = gsap.timeline({
-
-//             scrollTrigger: {
-//                 trigger: '.bg',
-//                 duration: 9,
-//                 start: 'top center',
-//                 end: 'bottom top',
-//                 scrub: true,
-//             }
-//         })
-
-//         tl.fromTo('.puffanimated', { y: -80, x: 0, scale: 0 }, { y: 650, x: 100, rotate: '390deg', scale: 3 })
-
-//         tl2.fromTo('.puffanimated2', { y: 600, x: 0, scale: 2.5 }, { y: -650, x: -150, rotate: '90deg', scale: 0.2 })
-//     })
-
-
-//     useGSAP(() => {
-
-//         const tl3 = gsap.timeline()
-//         let mm = gsap.matchMedia();
-
-//         mm.add("(max-width: 390px)", () => {
-
-//             gsap.registerPlugin(ScrollTrigger)
-
-//             const tl3 = gsap.timeline({
-//                 scrollTrigger: {
-//                     trigger: ".bg",
-//                     duration: 8,
-//                     start: "top center",
-//                     end: "bottom center",
-//                     markers: true,
-//                     scrub: true,
-//                 }
-//             })
-
-//             tl3.fromTo('.puffanimated3', { y: -60, x: 0, scale: 0 }, { y: 650, x: 0, rotate: '390deg', scale: 4 })
-//         })
-
-//     })
 
 
 
@@ -123,6 +63,12 @@
 
 import { useState, useEffect } from 'react';
 import { getMenuItems, getMenuByCategory, addToCart } from '../services/api';
+import puffanimated from '../assets/puffanimated.png'
+import puffanimated2 from '../assets/puffanimated2.png'
+import puffanimated3 from '../assets/puffanimated3.png'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
 
 function Menu() {
     const [menuItems, setMenuItems] = useState([]);
@@ -173,6 +119,63 @@ function Menu() {
     if (error) {
         return <div className="text-center p-8 text-red-500">{error}</div>;
     }
+
+    useGSAP(() => {
+
+        gsap.registerPlugin(ScrollTrigger)
+
+        const tl = gsap.timeline({
+
+            scrollTrigger: {
+                trigger: '.bg',
+                duration: 10,
+                start: 'top center',
+                end: 'bottom -450',
+                scrub: true,
+            }
+        })
+
+        const tl2 = gsap.timeline({
+
+            scrollTrigger: {
+                trigger: '.bg',
+                duration: 9,
+                start: 'top center',
+                end: 'bottom top',
+                scrub: true,
+            }
+        })
+
+        tl.fromTo('.puffanimated', { y: -80, x: 0, scale: 0 }, { y: 650, x: 100, rotate: '390deg', scale: 3 })
+
+        tl2.fromTo('.puffanimated2', { y: 600, x: 0, scale: 2.5 }, { y: -650, x: -150, rotate: '90deg', scale: 0.2 })
+    })
+
+
+    useGSAP(() => {
+
+        const tl3 = gsap.timeline()
+        let mm = gsap.matchMedia();
+
+        mm.add("(max-width: 390px)", () => {
+
+            gsap.registerPlugin(ScrollTrigger)
+
+            const tl3 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".bg",
+                    duration: 8,
+                    start: "top center",
+                    end: "bottom center",
+                    markers: true,
+                    scrub: true,
+                }
+            })
+
+            tl3.fromTo('.puffanimated3', { y: -60, x: 0, scale: 0 }, { y: 650, x: 0, rotate: '390deg', scale: 4 })
+        })
+
+    })
 
     return (
 
