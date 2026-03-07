@@ -66,49 +66,11 @@ function Menu() {
     const [error, setError] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
 
+
     // Fetch menu when component loads
     useEffect(() => {
         fetchMenu();
     }, [selectedCategory]);
-
-    const fetchMenu = async () => {
-        try {
-            setLoading(true);
-            let data;
-
-            if (selectedCategory === 'all') {
-                data = await getMenuItems();
-            } else {
-                data = await getMenuByCategory(selectedCategory);
-            }
-
-            setMenuItems(data);
-            setError(null);
-        } catch (err) {
-            setError('Failed to load menu. Please try again.');
-            console.error(err);
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    const handleAddToCart = async (menuItemId) => {
-        try {
-            await addToCart(menuItemId, 1);
-            alert('Added to cart!'); // Replace with better UI later
-        } catch (err) {
-            alert('Failed to add to cart');
-            console.error(err);
-        }
-    };
-
-    if (loading) {
-        return <div className="text-center p-8">Loading menu...</div>;
-    }
-
-    if (error) {
-        return <div className="text-center p-8 text-red-500">{error}</div>;
-    }
 
     useGSAP(() => {
 
@@ -166,6 +128,46 @@ function Menu() {
         })
 
     })
+
+    const fetchMenu = async () => {
+        try {
+            setLoading(true);
+            let data;
+
+            if (selectedCategory === 'all') {
+                data = await getMenuItems();
+            } else {
+                data = await getMenuByCategory(selectedCategory);
+            }
+
+            setMenuItems(data);
+            setError(null);
+        } catch (err) {
+            setError('Failed to load menu. Please try again.');
+            console.error(err);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleAddToCart = async (menuItemId) => {
+        try {
+            await addToCart(menuItemId, 1);
+            alert('Added to cart!'); // Replace with better UI later
+        } catch (err) {
+            alert('Failed to add to cart');
+            console.error(err);
+        }
+    };
+
+    if (loading) {
+        return <div className="text-center p-8">Loading menu...</div>;
+    }
+
+    if (error) {
+        return <div className="text-center p-8 text-red-500">{error}</div>;
+    }
+
 
     return (
 
