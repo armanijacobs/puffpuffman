@@ -9,17 +9,7 @@
 
 //     return (
 //         <div id='menu' className='w-screen h-1/2 bg-amber-400 flex flex-col items-center pb-20 space-y-4 bg'>
-//             <div>
-//                 <img src={puffanimated} className='h-20 absolute left-20 hidden md:flex puffanimated' />
-//             </div>
-
-//             <div>
-//                 <img src={puffanimated2} className='h-20 absolute right-20 hidden md:flex puffanimated2' />
-//             </div>
-
-//             <div>
-//                 <img src={puffanimated3} className='h-20 absolute right-20 md:hidden puffanimated3' />
-//             </div>
+//           
 
 //             <div className='text-center pt-8 z-1 menu'>
 //                 <h1 className='text-5xl md:text-7xl headertext text-white'>Menu</h1>
@@ -182,6 +172,19 @@ function Menu() {
         <div className='bg-amber-400'>
             <div id='menu' className="container p-6 w-screen mx-auto">
                 <h1 className="headertext text-5xl md:text-7xl font-bold mb-8 text-white text-center">Menu</h1>
+
+                {/* Image Animation */}
+                <div>
+//                 <img src={puffanimated} className='h-20 absolute left-20 hidden md:flex puffanimated' />
+//             </div>
+
+//             <div>
+//                 <img src={puffanimated2} className='h-20 absolute right-20 hidden md:flex puffanimated2' />
+//             </div>
+
+//             <div>
+//                 <img src={puffanimated3} className='h-20 absolute right-20 md:hidden puffanimated3' />
+//             </div>
 
                 {/* Category Filter */}
                 <div className="flex gap-4 mb-8">
