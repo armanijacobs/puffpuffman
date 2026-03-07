@@ -100,15 +100,18 @@ const OurStory = () => {
         <div id='ourstory' className='w-auto h-auto pb-40 bg-cyan-400 overflow-x-hidden md:pt-10 relative'>
 
             {/* Floating Puff Puff Images */}
-            <img src={puffanimated} className='h-30 absolute left-20 top-20 hidden md:flex puffanimated z-10' alt="puff 1" />
-            <img src={puffanimated2} className='h-25 absolute right-55 top-35 hidden md:flex puffanimated2 z-10' alt="puff 2" />
-            <img src={puffanimated3} className='h-30 absolute right-20 top-20 md:hidden puffanimated3 z-10' alt="puff 3" />
+            <img src={puffanimated} className='h-25 absolute left-20 top-25 hidden md:flex puffanimated z-10' alt="puff 1" />
+            <img src={puffanimated2} className='h-35 absolute right-140 top-35 hidden md:flex puffanimated2 z-10' alt="puff 2" />
+            {/* <img src={puffanimated3} className='h-26 absolute right-34 top-180 md:hidden puffanimated3 z-10' alt="puff 3" /> */}
+
+            {/* Floating Puff for Mobile */}
+            <img src={puffanimated2} className='h-16 absolute right-10 top-7 puffanimated2 z-10 md:hidden' alt="puff 1" />
 
             <h1 className='headertext text-5xl md:text-7xl text-white text-center md:text-end md:pr-30 pt-20'>Our Story</h1>
 
             <div className='md:flex flex-row mx-auto pt-10 md:w-[90%]'>
-                <p className='text-white font-light text-center text-xs md:text-xl p-8 md:w-1/2 md:pt-20 paragraph xl:text-3xl'>
-                    "Puff puff's were always my favorite snack growing up as a kid in the UK. I remember relishing in anticipation to get my hands on some puff puff at our Nigerian functions and events. Now we want to share that same experience with the rest of the world with our special family recipe that has been passed down from generations before us."
+                <p className='text-white font-light text-center text-xs md:text-xl p-8 md:w-1/2 md:pt-20 paragraph xl:text-3xl headertext'>
+                    <span className='text-4xl font-bold'>-</span> <span className='text-amber-400 text-5xl'>Puff puff's</span> were always my favorite snack growing up as a kid in the UK. I remember relishing in anticipation to get my hands on some <span className='text-amber-400 text-5xl'>puff puff</span> at our Nigerian functions and events. Now we want to share that same experience with the rest of the world with our special family recipe that has been passed down from generations before us <span className='text-4xl font-bold'>-</span>
                 </p>
 
                 <div className='w-max mx-auto pt-10 relative'>

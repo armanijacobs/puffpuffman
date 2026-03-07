@@ -5,7 +5,7 @@ import Carousel from './Carousel.jsx'
 
 const Selections = () => {
     return (
-        <div id='selections' className='w-screen mx-auto '>
+        <div id='selections' className='w-screen mx-auto'>
 
             <div className='absolute xl:top-130'>
                 <img src={cloudes} className='-translate-y-13 md:-translate-y-34' />
@@ -15,8 +15,12 @@ const Selections = () => {
                 <Carousel />
             </div>
 
-            <div className='relative xl:-bottom-60'>
-                <img src={cloudes2} className='translate-y-13 md:translate-y-40 xl:-translate-y-11 z-1 rotate-180' />
+            <div className='relative text-center sm:text-lg md:text-7xl top-13 sm:top-40 z-1'>
+                <h1 className='landingtext text-cyan-700 z-1'>PLACE AN ORDER BELOW! <br /> ↓ </h1>
+            </div>
+
+            <div className='relative xl:-bottom-60 z-2'>
+                <img src={cloudes2} className='relative translate-y-13 md:translate-y-40 xl:-translate-y-11 rotate-180 z-2'></img>
             </div>
 
         </div >

@@ -1,6 +1,7 @@
 import React from 'react'
-import puffpufflogo from '../assets/puffpuff-logo.png'
+import puffpufflogo from '../assets/puffpuff-Warp.png'
 import { BiMenu } from 'react-icons/bi'
+import { AiOutlineClose } from 'react-icons/ai' // Add close icon
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
@@ -8,20 +9,15 @@ import { Link } from 'react-scroll'
 import { useState, useEffect } from 'react';
 import { getCart } from '../services/api';
 
-
-
 const Navbar = ({ onCartClick }) => {
 
     const [cartCount, setCartCount] = useState(0);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // ← ADD THIS
 
-    // Fetch cart count on load
     useEffect(() => {
         fetchCartCount();
-
-        // Listen for cart updates
         const handleCartUpdate = () => fetchCartCount();
         window.addEventListener('cartUpdated', handleCartUpdate);
-
         return () => window.removeEventListener('cartUpdated', handleCartUpdate);
     }, []);
 
@@ -36,14 +32,12 @@ const Navbar = ({ onCartClick }) => {
     };
 
     useGSAP(() => {
-
-        gsap.registerPlugin(ScrollTrigger)
-
+        gsap.registerPlugin(ScrollTrigger);
 
         gsap.set('.nav-bg', {
             backgroundColor: 'cyan-400',
             opacity: 0,
-        })
+        });
 
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -51,39 +45,33 @@ const Navbar = ({ onCartClick }) => {
                 toggleActions: 'play none none reverse',
                 scrub: 1
             }
-        })
+        });
 
         tl.to('.nav-bg', {
             opacity: 1,
+        });
+    });
 
-        })
-    })
+    // ← ADD THIS FUNCTION
+    const handleMobileMenuClick = (link) => {
+        setMobileMenuOpen(false); // Close menu after clicking
+    };
 
     return (
         <>
             <div className='w-screen h-14 flex justify-between items-center p-4 mt-3 md:mt-7 fixed font-[Roboto] font-light text-white z-30'>
 
-
                 <Link to="landingpage" smooth={true} duration={500}>
                     <img src={puffpufflogo} className='h-7 md:h-16 md:pl-4' />
                 </Link>
 
+                {/* Desktop Menu */}
                 <ul className='w-3/4 hidden md:flex justify-around'>
-                    <li>
-                        <Link to="landingpage" smooth={true} duration={500}>Home</Link>
-                    </li>
-                    <li>
-                        <Link to="selections" smooth={true} duration={500}>Selections</Link>
-                    </li>
-                    <li>
-                        <Link to="ourstory" smooth={true} duration={500}>Our Story</Link>
-                    </li>
-                    <li>
-                        <Link to="menu" smooth={true} duration={500}>Menu</Link>
-                    </li>
-                    <li>
-                        <Link to="reviews" smooth={true} duration={500}>Reviews</Link>
-                    </li>
+                    <li><Link to="landingpage" smooth={true} duration={500}>Home</Link></li>
+                    <li><Link to="selections" smooth={true} duration={500}>Selections</Link></li>
+                    <li><Link to="ourstory" smooth={true} duration={500}>Our Story</Link></li>
+                    <li><Link to="menu" smooth={true} duration={500}>Menu</Link></li>
+                    <li><Link to="reviews" smooth={true} duration={500}>Reviews</Link></li>
                     <button onClick={onCartClick} className="relative">
                         🛒 Cart
                         {cartCount > 0 && (
@@ -94,11 +82,91 @@ const Navbar = ({ onCartClick }) => {
                     </button>
                 </ul>
 
-                <BiMenu className='md:hidden h-6 w-6 -translate-x-4' />
+                {/* Mobile Menu Toggle - ADD onClick */}
+                <button
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    className='md:hidden -translate-x-4 z-50'
+                >
+                    {mobileMenuOpen ?
+                        <AiOutlineClose className='h-6 w-6' /> :
+                        <BiMenu className='h-6 w-6' />
+                    }
+                </button>
+
                 <div className='nav-bg bg-cyan-400 w-screen h-26 -z-1 absolute -top-8 left-0'></div>
+            </div>
 
-            </div >
-
+            {/* ← ADD MOBILE MENU */}
+            {mobileMenuOpen && (
+                <div className='md:hidden fixed top-14 left-0 w-full bg-cyan-400 z-20 shadow-lg'>
+                    <ul className='flex flex-col items-center gap-4 py-6 text-white font-[Roboto]'>
+                        <li>
+                            <Link
+                                to="landingpage"
+                                smooth={true}
+                                duration={500}
+                                onClick={handleMobileMenuClick}
+                            >
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="selections"
+                                smooth={true}
+                                duration={500}
+                                onClick={handleMobileMenuClick}
+                            >
+                                Selections
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="ourstory"
+                                smooth={true}
+                                duration={500}
+                                onClick={handleMobileMenuClick}
+                            >
+                                Our Story
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="menu"
+                                smooth={true}
+                                duration={500}
+                                onClick={handleMobileMenuClick}
+                            >
+                                Menu
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="reviews"
+                                smooth={true}
+                                duration={500}
+                                onClick={handleMobileMenuClick}
+                            >
+                                Reviews
+                            </Link>
+                        </li>
+                        <button
+                            onClick={() => {
+                                onCartClick();
+                                setMobileMenuOpen(false);
+                            }}
+                            className="relative"
+                        >
+                            🛒 Cart
+                            {cartCount > 0 && (
+                                <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                                    {cartCount}
+                                </span>
+                            )}
+                        </button>
+                    </ul>
+                </div>
+            )}
         </>
     )
 }

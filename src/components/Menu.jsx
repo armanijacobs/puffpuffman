@@ -64,7 +64,7 @@ function Menu() {
                 <div className="flex gap-4 mb-8">
                     <button
                         onClick={() => setSelectedCategory('all')}
-                        className={`px-4 py-2 rounded ${selectedCategory === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                        className={`px-4 py-2 rounded  ${selectedCategory === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                     >
                         All
                     </button>

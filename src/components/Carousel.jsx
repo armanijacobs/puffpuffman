@@ -27,28 +27,28 @@ function Carousel() {
             <Slider {...settings}>
                 <div className='text-center'>
                     <img src={toffeesauce} className='h-70 md:h-155 m-auto' />
-                    <h2 className=''>White Chocolate Puff Puffs</h2>
-                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with white chocolate and sprinkled with dark and white chocolate nibbles</p>
+                    <h2 className=''>Toffee Sauce Puff Puffs</h2>
+                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with toffee sauce</p>
                 </div>
                 <div className='text-center'>
                     <img src={darkchoco} className='h-70 md:h-155 m-auto' />
-                    <h2 className=''>Variety  Puff Puffs</h2>
-                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with any sauce of your liking</p>
+                    <h2 className=''>Dark Chocolate Puff Puffs</h2>
+                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with dark chocolate sauce</p>
                 </div>
                 <div className='text-center'>
                     <img src={whitechoco} className='h-70 md:h-155 m-auto' />
                     <h2 className=''>White Chocolate Puff Puffs</h2>
-                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with dark chocolate and sprinkled with dark and white chocolate nibbles</p>
+                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with white chocolate</p>
                 </div>
                 <div className='text-center'>
                     <img src={variety} className='h-70 md:h-155 m-auto' />
-                    <h2 className=''>Toffee Sauce Puff Puffs</h2>
-                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with toffee sauce and sprinkled with dark and white chocolate nibbles</p>
+                    <h2 className=''>Variety of Puff Puffs</h2>
+                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with any sauce of your liking</p>
                 </div>
                 <div className='text-center'>
                     <img src={rasberry} className='h-70 md:h-155 m-auto' />
                     <h2 className=''>Rasberry Sauce Puff Puffs</h2>
-                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with rasberry sauce and sprinkled with dark and white chocolate nibbles</p>
+                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with rasberry sauce</p>
                 </div>
             </Slider>
         </div>
