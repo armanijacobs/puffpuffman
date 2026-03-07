@@ -3,6 +3,9 @@ import img1 from '../assets/img1.png'
 import img2 from '../assets/img2.png'
 import img3 from '../assets/img3.png'
 import img4 from '../assets/img4.png'
+import puffanimated from '../assets/puffanimated.png'
+import puffanimated2 from '../assets/puffanimated2.png'
+import puffanimated3 from '../assets/puffanimated3.png'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
@@ -74,10 +77,83 @@ const OurStory = () => {
         })
     })
 
+    useGSAP(() => {
+
+        gsap.registerPlugin(ScrollTrigger)
+
+        const tl = gsap.timeline({
+
+            scrollTrigger: {
+                trigger: '#menu',
+                duration: 10,
+                start: 'top center',
+                end: 'bottom -450',
+                scrub: true,
+            }
+        })
+
+        const tl2 = gsap.timeline({
+
+            scrollTrigger: {
+                trigger: '#menu',
+                duration: 9,
+                start: 'top center',
+                end: 'bottom top',
+                scrub: true,
+            }
+        })
+
+        tl.fromTo('.puffanimated', { y: -80, x: 0, scale: 0 }, { y: 650, x: 100, rotate: '390deg', scale: 3 })
+
+        tl2.fromTo('.puffanimated2', { y: 600, x: 0, scale: 2.5 }, { y: -650, x: -150, rotate: '90deg', scale: 0.2 })
+    }, [loading])
+
+
+    useGSAP(() => {
+
+        if (loading) return
+
+        const tl3 = gsap.timeline()
+        let mm = gsap.matchMedia();
+
+        mm.add("(max-width: 390px)", () => {
+
+            gsap.registerPlugin(ScrollTrigger)
+
+            const tl3 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#menu",
+                    duration: 8,
+                    start: "top center",
+                    end: "bottom center",
+                    markers: true,
+                    scrub: true,
+                }
+            })
+
+            tl3.fromTo('.puffanimated3', { y: -60, x: 0, scale: 0 }, { y: 650, x: 0, rotate: '390deg', scale: 4 })
+        })
+
+    }, [loading])
+
 
 
     return (
         <div id='ourstory' className='w-auto h-auto pb-40 bg-cyan-400 overflow-x-hidden md:pt-10'>
+
+            {/* Image Animation */}
+            <div>
+                <img src={puffanimated} className='h-20 absolute left-20 hidden md:flex puffanimated' />
+            </div>
+
+            <div>
+                <img src={puffanimated2} className='h-20 absolute right-20 hidden md:flex puffanimated2' />
+            </div>
+
+            <div>
+                <img src={puffanimated3} className='h-20 absolute right-20 md:hidden puffanimated3' />
+            </div>
+
             <h1 className='headertext text-5xl md:text-7xl text-white text-center md:text-end md:pr-30 pt-20'>Our Story</h1>
 
             <div className='md:flex flex-row mx-auto pt-10 md:w-[90%]'>
