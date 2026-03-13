@@ -24,13 +24,13 @@ function Carousel() {
             <Slider {...settings}>
                 <div className='text-center'>
                     <img src={toffeesauce} className='h-70 md:h-155 m-auto' />
-                    <h2 className=''>Toffee Sauce Puff Puffs</h2>
-                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with toffee sauce</p>
+                    <h2 className=''>Biscoff Topping Puff Puffs</h2>
+                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with biscoff sauce</p>
                 </div>
                 <div className='text-center'>
                     <img src={darkchoco} className='h-70 md:h-155 m-auto' />
-                    <h2 className=''>Dark Chocolate Puff Puffs</h2>
-                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with dark chocolate sauce</p>
+                    <h2 className=''>Milk Chocolate Puff Puffs</h2>
+                    <p className='font-light text-xs'>Fluffy Golden Puff Puffs drizzled with milk chocolate sauce</p>
                 </div>
                 <div className='text-center'>
                     <img src={whitechoco} className='h-70 md:h-155 m-auto' />
