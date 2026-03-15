@@ -74,7 +74,7 @@ function Menu() {
                     >
                         Originals
                     </button>
-                    <button
+                    <button disabled={true}
                         onClick={() => setSelectedCategory('toppings')}
                         className={`px-4 py-2 rounded ${selectedCategory === 'toppings' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                     >
