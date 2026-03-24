@@ -62,9 +62,9 @@ function Menu() {
 
                 {/* Category Filter */}
                 <div className="flex gap-4 mb-8">
-                    <button disabled={true}
+                    <button
                         onClick={() => setSelectedCategory('all')}
-                        className={`px-4 py-2 rounded  ${selectedCategory === 'all' ? 'bg-blue-500 text-white line-through' : 'bg-gray-200 line-through'}`}
+                        className={`px-4 py-2 rounded  ${selectedCategory === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                     >
                         All
                     </button>
@@ -73,12 +73,6 @@ function Menu() {
                         className={`px-4 py-2 rounded ${selectedCategory === 'originals' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                     >
                         Originals
-                    </button>
-                    <button disabled={true}
-                        onClick={() => setSelectedCategory('toppings')}
-                        className={`px-4 py-2 rounded ${selectedCategory === 'toppings' ? 'bg-blue-500 text-white line-through' : 'bg-gray-200 line-through'}`}
-                    >
-                        Toppings
                     </button>
                     <button
                         onClick={() => setSelectedCategory('special offers')}

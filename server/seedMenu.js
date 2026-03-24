@@ -32,12 +32,12 @@ const menuItems = [
         available: true
     },
 
-    // TOPPINGS
+    // TOPPINGS (NOW SPECIAL OFFERS)
     {
-        name: 'Chocolate',
-        description: 'Choco sauce drizzled on top',
-        price: 0.50,
-        category: 'toppings',
+        name: 'Chocolate & White Chocolate',
+        description: 'Chocolate & White Chocolate sauce drizzled on top',
+        price: 7.00,
+        category: 'special offers',
         image: '/images/Chocolate,_White_Chocolate_Puff_Puff.jpg',
         popular: true,
         available: true
@@ -45,56 +45,56 @@ const menuItems = [
     {
         name: 'White Chocolate',
         description: 'White chocolate sauce drizzled on top',
-        price: 0.50,
-        category: 'toppings',
+        price: 7.00,
+        category: 'special offers',
         image: '/images/Chocolate,_White_Chocolate_Puff_Puff.jpg',
         available: true
     },
     {
-        name: 'Rasberry',
+        name: 'Valentines',
         description: 'Rasberry sauce drizzled on top',
-        price: 0.50,
-        category: 'toppings',
+        price: 7.00,
+        category: 'special offers',
         image: '/images/Valentines_Puff_Puff.jpg',
         available: true
     },
     {
         name: 'Golden Syrup',
         description: 'Silky golden syrup squirted all over',
-        price: 0.50,
-        category: 'toppings',
+        price: 7.00,
+        category: 'special offers',
         image: '/images/Golden_Syrup_Puff_Puff_1.jpg',
         available: true
     },
     {
         name: 'Cinnamon Sugar',
         description: 'Sprinkled on top',
-        price: 0.50,
-        category: 'toppings',
+        price: 7.00,
+        category: 'special offers',
         image: '/images/Plain_Puff_Puff_1.jpg',
         available: true
     },
     {
         name: 'Iced Sugar',
         description: 'Sprinkled on top',
-        price: 0.50,
-        category: 'toppings',
+        price: 7.00,
+        category: 'special offers',
         image: '/images/Icing_Sugar_Puff_Puff_1.jpg',
         available: true
     },
     {
-        name: 'Biscoff',
+        name: 'Biscoff & White Chocolate',
         description: 'Crumbled on top',
-        price: 0.50,
-        category: 'toppings',
+        price: 7.00,
+        category: 'special offers',
         image: '/images/Biscoff,_White_Chocolate_Puff_Puff_1.jpg',
         available: true
     },
     {
-        name: 'Hersheys',
+        name: 'Chocolate & White Chocolate Oreo Puff Puff',
         description: 'Crumbled on top',
-        price: 0.50,
-        category: 'toppings',
+        price: 7.00,
+        category: 'special offers',
         image: '/images/Chocolate,_White_Chocolate,_Oreo_Puff_Puff_1.jpg',
         available: true
     },
@@ -103,7 +103,7 @@ const menuItems = [
     // SPECIAL OFFERS
     {
         name: '6 Puff Puff, 4 Toppings',
-        description: 'A deal you cannot miss',
+        description: 'A deal you cannot miss (Oreo Biscoff Fusion shown in image)',
         price: 7.00,
         category: 'special offers',
         image: '/images/Oreo_Biscoff_Fusion_Puff_Puff_2.jpg',
