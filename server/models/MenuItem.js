@@ -19,7 +19,7 @@ const menuItemSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-        enum: ['originals', 'toppings', 'special offers']  // Only these 3 allowed
+        enum: ['originals', 'special offers']  // Only these 2 allowed
     },
     image: {
         type: String,
